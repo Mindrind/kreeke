@@ -1,0 +1,839 @@
+<h2>2021 September 05 - Version 3.2.4</h2>
+
+<h4>New Features</h4>
+<ul>
+    <li>Video and stream viewing can now be resumed at the same time from previous session.</li>
+    <li>Added several search integrations, including meillisearch and algolia. This allows for much better search speed and accuracy.</li>
+    <li>Added view mode switcher to browse titles and list page.</li>
+    <li>Added comments for title and episode page.</li>
+    <li>Added a fully featured, token based API. It can be used to integrate MTDb into other projects, native apps and more.</li>
+    <li>Added <strong>Manage API Access Tokens</strong> section in <a href="https://mtdb.1.vebto.com/account/settings" target="_blank" rel="noopener">account settings</a> page for creating or revoking API access tokens.</li>
+    <li>Added functional API docs. They can be accessed at <a href="https://mtdb.1.vebto.com/api-docs" target="_blank" rel="noopener">your-site.com/api-docs</a> url, there's also a link in account settings page.</li>
+    <li>Updated datatable design in admin area and added a number of new filters.</li>
+</ul>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Browse titles and people page will now have next and previous pagination buttons instead of infinite scroll.</li>
+    <li>List page will now show list owner, created at and updated_at dates.</li>
+    <li>Original title is now editable and searchable on the site.</li>
+    <li>Streamable label will now show in lists and related titles panel.</li>
+    <li>Filmography categories on person page will now be ordered by item count.</li>
+    <li>It's now possible to change language and switch to dark mode from footer.</li>
+    <li>Separated all "as himself" credits on person page into separate category.</li>
+    <li>Main title page will now show up to three directors.</li>
+    <li>A more descriptive error message will now be shown if incompatible PHP version is detected.</li>
+    <li>Updated laravel and angular to latest versions.</li>
+    <li>Permission manager in admin area will now have better descriptions and rarely used permissions will be hidden behind "advanced"  flag.</li>
+    <li>Compatibility with latest Stripe API version.</li>
+    <li>Custom pages will now support code highlighting for more languages.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed an issue where season data was not cached properly sometimes.</li>
+    <li>Prevent search page from opening when clicking on search icon in add credit modal.</li>
+    <li>Fullscreen for vimeo embeds will now work properly.</li>
+    <li>Corrected a few languages in "admin > settings > automation" page having wrong code.</li>
+    <li>Don't show aggregate rating SEO tag, if title does not have any ratings or reviews.</li>
+    <li>Episode release date will now show correctly when editing it from admin area.</li>
+    <li>Quotes will now show correctly on search page.</li>
+    <li>Social logins panel in account settings page will now be hidden if all social logins are disabled in settings page.</li>
+    <li>Fixed an issue where titles containing only numbers might not be searchable.</li>
+    <li>Sitemap generator will now include episode and season urls.</li>
+    <li>Full credits url will now be correctly added to sitemap generated from admin area.</li>
+    <li>Fixed a few issues with sitemap generation.</li>
+    <li>Landing page "join now" button will now link to register page instead of pricing if billing is disabled in settings page.</li>
+    <li>Fixed an issue where public image would sometimes be uploaded as private when using s3 to store files.</li>
+    <li>Fixed an issue where deleting all text in search bar might prevent further searching until page reload.</li>
+    <li>Fixed an issue where installation might not start properly on some hosting environments.</li>
+    <li>A number of other smaller fixes.</li>
+</ul>
+
+
+<h2>2020 September 07 - Version 3.2.3</h2>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Filtering by genres on browse page should now be faster.</li>
+    <li>Updated data tables across the site and images used when there's nothing to display in the table.</li>
+    <li>Infinite scroll will now be triggered sooner when scrolling on discover page.</li>
+    <li>Scrollbar in dark mode in firefox will now match site color better.</li>
+    <li>Navbar can now be hidden for custom page.</li>
+    <li>Role index page will now list users by date user was assigned to role.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Automatically imported news articles will now have correct source url.</li>
+    <li>Genres with cyrillic and other accented characters added from settings page should now work properly.</li>
+    <li>Deleting backdrop images when editing title from admin area will now properly remove all relevant files from the disk.</li>
+    <li>Error message will now be shown when trying to create a video with a name that already exists.</li>
+    <li>When chunked uploading is enabled videos will now correctly upload to public disk.</li>
+    <li>Redirect user to upgrade/pricing page when clicking on external video link if user or role has not "videos.play" permission.</li>
+    <li>Locally created titles that are not marked as "fully_synced" will now be included in the sitemap.</li>
+    <li>Default html5 captions on firefox will now longer display initially if caption are disabled on the player.</li>
+    <li>A number of other smaller fixes.</li>
+</ul>
+
+<h2>2020 July 27 - Version 3.2.2</h2>
+
+<h4>New Features</h4>
+<ul>
+    <li>Only one device can now be allowed to be logged into user account at the same time.</li>
+</ul>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Reduced the time it takes to auto-update title by about 3x.</li>
+    <li>Titles in a list can now be displayed in either portrait or landscape mode.</li>
+    <li>Automatically scroll selected season and episode into view when editing title.</li>
+    <li>Added edit button to title, season, episode and person page (if user has relevant permissions).</li>
+    <li>User with "titles.update" permission will now be able to create and edit episodes for that title as well.</li>
+    <li>Added next and previous buttons to image popup on title page.</li>
+    <li>Updated Laravel to latest version. MTDb now requires at least PHP 7.2.5 version to work properly.</li>
+    <li>Updated login, register, forgot password and reset password pages design.</li>
+    <li>If some server error occurs a more descriptive message will now be shown if user is logged in as admin.</li>
+    <li>All email templates will now have the same design.</li>
+    <li>Added separate address for contact page in mail settings page.</li>
+    <li>Show notification in "settings -> general" page if specified base site url and current url don't match.</li>
+    <li>Improved input focus outline design.</li>
+    <li>Landing page can now be enabled from "admin > settings > general" page.</li>
+    <li>Google analytics integration will now use newer .json key file instead of .p12</li>
+    <li>Free plan can now be selected in pricing page and will redirect to sign up page.</li>
+    <li>Improved contrast for several widgets in dark mode.</li>
+    <li>Removed "force subscription" setting. Same functionality can now be achieved by removing all permissions from "users" and "guests" roles in admin area.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Captions with same name can now be created for different videos.</li>
+    <li>Placeholders that could not be replaced in SEO tags will now be removed.</li>
+    <li>Fixed an issue where search page was sometimes limited to 8 results incorrectly.</li>
+    <li>"Only Streamable" toggle will now correctly only show titles that have videos of "full" category attached.</li>
+    <li>Cache method changes in settings page will now be properly validated.</li>
+    <li>Clearing cache will now work if "proc_open" function was disabled on the server.</li>
+    <li>Make sure text logo does not push login button offsreen.</li>
+    <li>Always store appearance editor custom css and js locally, regardless of storage method in settings page.</li>
+    <li>If placeholders can't be replaced in tags provided in "admin > appearance > seo" page, hide those tags when displaying the page.</li>
+    <li>A number of other smaller fixes.</li>
+</ul>
+
+<h2>2020 May 12 - Version 3.2.1</h2>
+
+<h4>New Features</h4>
+<ul>
+    <li>Added support for adaptive hls and dash streams (.m3u8, .mpd, .ts etc) with automatic quality and caption selector.</li>
+    <li>Browse page can now be set as homepage.</li>
+    <li>Added tags and reviews data tables in admin area.</li>
+    <li>Video plays are now tracked and the total count can be viewed in videos table in admin area.</li>
+    <li>Added configurable GDPR cookie notice.</li>
+    <li>Added configurable confirmation policies to register page.</li>
+    <li>Added chunked uploading. This allows MTDb to upload large files in smaller chunks for better upload reliability and avoid server max file size limits.</li>
+    <li>Added support for XSendFile and XAcceleratedResponse for reducing server RAM and CPU usage when previewing or downloading files.</li>
+    <li>Added resumable uploads functionality.</li>
+</ul>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Video and other uploads can now be stored on cloud providers (s3, digitalocean, backblaze etc)</li>
+    <li>Possible video qualities can now be specified from settings page.</li>
+    <li>Minimum and maximum years can now be specified for release date slider in browse titles page.</li>
+    <li>Landing page image and overlay color can now be changed from appearance editor.</li>
+    <li>"Add Credit" modal in edit title page will now show a list of available jobs and departments.</li>
+    <li>Videos can now be added for a series without selecting a specific season or episode.</li>
+    <li>Title selector in video modal will now use regular site search for better results accuracy.</li>
+    <li>Improved genre, keyword and production country management when editing titles.</li>
+    <li>Local search will now order results by relevance first and then by popularity.</li>
+    <li>Added "videos.play" permission. Users without this permission will be redirected to upgrade page when trying to play a video.</li>
+    <li>Show 5 episode credits per series in actor filmography by default with a button to show more.</li>
+    <li>Next video will now be played automatically when player overlay is open and current video ends.</li>
+    <li>Translation lines can now be removed in "admin > translations" page.</li>
+    <li>Show more descriptive error message in create video modal.</li>
+    <li>Redirect user from "billing/pricing" to "billing/upgrade" url if they are already logged in or subscribed.</li>
+    <li>Close filters sidebar in browse page on mobile by default.</li>
+    <li>Slugs will now be generated properly for cyrillic and chinese characters.</li>
+    <li>Billing plans will now be synced automatically when changing paypal or stripe credentials from settings page.</li>
+    <li>User password can now be changed from admin area.</li>
+    <li>Increase time period for "next and previous episodes" panel to two weeks from current date (was one week previously).</li>
+    <li>If title primary video has a thumbnail, use that thumbnail as title video cover image.</li>
+    <li>Hide title videos panel if there are no videos to show and user can't add new videos.</li>
+    <li>Strip title name from automatically imported youtube videos.</li>
+    <li>Compatibility with latest tmdb and stripe API.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed an issue where wrong episode count was shown in edit video modal.</li>
+    <li>Don't show news articles in custom pages table in admin area.</li>
+    <li>Don't remove old image if there's no new poster image available on themoviedb.</li>
+    <li>Fixed a few issues with enabling memcached cache driver.</li>
+    <li>Clicking related videos in player sidebar will now always correctly load captions.</li>
+    <li>Titles with accented characters will now work properly in urls.</li>
+    <li>Corrected a few issues with input texts having low contrast in dark mode.</li>
+    <li>Adding production countries when editing title will no longer require page reload.</li>
+    <li>Show age ratings from settings page in edit title page.</li>
+    <li>Prevent deletion of billing plans if any users are subscribed to them.</li>
+    <li>Prevent billing plan parent being set to the plan itself.</li>
+    <li>Properly escape double quotes in page meta description tag.</li>
+    <li>Don't show videos in title page if user has no "videos.show" permission.<li>
+    <li>Email confirmation sent via "Resend" button will now contain correct email confirmation url.</li>
+    <li>Fixed a few issues with syncing filters and url in browse page.</li>
+    <li>Search bar will now have proper background color on mobile when dark mode is active.</li>
+    <li>Fixed a few issues with translations.</li>
+    <li>Properly show landing or homepage preview in appearance editor when relevant menu item is selected.</li>
+    <li>Public lists can now properly be accessed event without "lists.view" permission.</li>
+    <li>Don't disable "onlyStreamable" filter when clicking "movies" or "series" navbar menu items.</li>
+    <li>Hide reviews tab in title page if user does not have "reviews.view" permission.</li>
+    <li>Show correct character name in filmography if actor has been in multiple seasons of same show as different character.</li>
+    <li>Chart legend items will now wrap to new line if there's not enough space.</li>
+    <li>A number of other smaller fixes and improvements.</li>
+</ul>
+
+
+<h2>2019 September 12 - Version 3.2.0</h2>
+<h4>New Features</h4>
+<ul>
+    <li>Added subscriptions and billing functionality.</li>
+    <li>Data tables in admin area now have a number of built-in filters for easier data management.</li>
+    <li>Added new table design for title and episode videos. Active design can be changed from settings page.</li>
+    <li>Added an option for users to report videos.</li>
+    <li>Video table in admin area can now be filtered by title, season and episode.</li>
+    <li>Added new list auto update options for getting most recently created movies and series and most recently published videos.</li>
+    <li>Added "Back to top" button to browse titles and series page.</li>
+    <li>Search can now be performed using both TMDb and Local providers.</li>
+    <li>Captions can now be added to videos.</li>
+    <li>Added new video player with support for captions, player speed, pip and more.</li>
+    <li>Player overlay can now show other videos from same season in related videos panel.</li>
+</ul>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Added a number of new content and streaming related settings allowing further fine tuning of the site.</li>
+    <li>Images will now be lazy loaded to improve performance.</li>
+    <li>Videos can now be added from admin "videos" page as well as from "titles" page.</li>
+    <li>Movie and series urls will now contain titles.</li>
+    <li>Sorting order on people page can now be changed.</li>
+    <li>Admin area is now fully responsive.</li>
+    <li>Video files can now be uploaded directly from add and edit video modals.</li>
+    <li>Default video order for title and episode pages can now be changed from settings page.</li>
+    <li>Language can now be specified for videos.</li>
+    <li>Videos automatically imported from themoviedb can now be hidden from title and episode pages.</li>
+    <li>Videos can now be deleted from title page by user who uploaded them or admin.</li>
+    <li>Videos on title page will now scroll in a single row, instead of being displayed in a grid.</li>
+    <li>Movies and episodes can now have "streamable" label.</li>
+    <li>List description will now be shown on main list page.</li>
+    <li>Videos can now be approved or disapproved from admin area. Disapproved videos will not be shown to users.</li>
+    <li>Title images can now be re-ordered.</li>
+    <li>Title, person, list and search method can now be set independently to "local" or "tmdb".</li>
+    <li>Person filmography syncing can now be toggled if person data provider is set to "tmdb".</li>
+    <li>Movie posters will now always be scaled to same height.</li>
+    <li>If list is set to "auto update" its content will now be immediately updated after creating or updating that list.</li>
+    <li>Users can now update or delete their own videos from title or episode page.</li>
+    <li>Custom HTML can now be entered from "admin -> appearance > custom code" page.</li>
+    <li>Minimum popularity for people page can now be specified from settings page.</li>
+    <li>Increased performance of local search.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Automatically delete user lists when user is deleted from admin.</li>
+    <li>Lists with both people and titles will now work properly.</li>
+    <li>Properly show page title on news article page.</li>
+    <li>Episode credits in person filmography will now be properly ordered by season and episode number.</li>
+    <li>Episode year will now be automatically filled in when creating episode from admin area.</li>
+</ul>
+
+<h2>2019 June 12 - Version 3.1.4</h2>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Local search will now properly display more then 5 results per type.</li>
+    <li>Corrected a few issues with generated "ld+json" structure.</li>
+    <li>Fixed an issue where custom pages sometimes would not recognize logged in user.</li>
+    <li>Fixed an issue where movie plot sometimes would not update if "more/less" toggle button was visible.</li>
+    <li>Corrected a few issues with release date filter in "browse" page.</li>
+    <li>Fixed an issue with newly created lists sometime not being editable.</li>
+</ul>
+
+<h2>2019 April 24 - Version 3.1.3</h2>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed an issue with some resources not having proper urls in sitemap.</li>
+    <li>Long descriptions in slider show now get collapsed properly.</li>
+    <li>Fixed an issue where genres with some symbols would not work properly in "browse" page.</li>
+    <li>Episode page should not have correct seo tags.</li>
+</ul>
+
+<h2>2019 April 14 - Version 3.1.1</h2>
+
+<h4>New Features</h4>
+<ul>
+    <li>Added sitemap generator in "admin -> settings -> content" page.</li>
+    <li>Meta tags will now be visible on regular site, not just for crawlers and bots.</li>
+    <li>Added recaptcha support for "registration" and "contact us" pages.</li>
+    <li>Added icon selector for "admin -> appearance -> menus" page.</li>
+    <li>Added "Contact Us" page.</li>
+</ul>
+
+<h4>Enhancements</h4>
+<ul>
+    <li>Google "mobile friendly" tests should now fully pass.</li>
+    <li>SEO editor now has a more powerful placeholder system which allows usage of all data that will be available for a particular resource.</li>
+    <li>Browser page title will now reflect title specified via "admin -> appearance -> seo" page.</li>
+    <li>SEO editor will now use "textarea" to make editing easier.</li>
+    <li>Episode number can now be changed when editing a series from admin area.</li>
+    <li>Age ratings for "browse" page can now be modified from settings page.</li>
+    <li>Menu manager "route" type items now support query parameters.</li>
+    <li>Settings page will now validate most newly entered settings.</li>
+    <li>Google analytics .p12 file can now be uploaded from settings page.</li>
+</ul>
+
+<h4>Bug Fixes</h4>
+<ul>
+    <li>"Add item" panel in menu manager should now work on safari.</li>
+    <li>Fixed an issue where user permissions could not be updated from admin area sometimes.</li>
+    <li>Navigation menu should now work properly on tablets.</li>
+    <li>Sitename entered in "admin -> appearance -> general" page will now affect emails.</li>
+</ul>
+
+
+<h2>2019 March 16 - Version 3.0.9</h2>
+<h4>Enhancements</h4>
+<ul>
+    <li>Show actor's character name in "full cast" page for a title.</li>
+    <li>Title backdrop now can be set from admin area.</li>
+    <li>External videos attached to title will now show their domain favicon.</li>
+    <li>External link added via menu manager will now open in new browser page.</li>
+    <li>Improved layout of episode page images.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>It should not be possible to set homepage to blank page anymore from settings.</li>
+    <li>Toggle "Only streamable" to "on" by default should work properly now.</li>
+    <li>Genres in non-english languages are now supported.</li>
+    <li>Runtime and release date order options will now work properly in list page.</li>
+    <li>Sitename entered in "admin > appearance > general" page will now affect emails.</li>
+    <li>Fixed an issue with video and news creation on PHP 7.3</li>
+</ul>
+
+<h2>2019 January 28 - Version 3.0.8</h2>
+<h4>Enhancements</h4>
+<ul>
+    <li>Videos can now be attached to whole series.</li>
+    <li>Added separate SEO settings for episode and season pages.</li>
+    <li>Increased number of search results shown in search page.</li>
+    <li>Don't load "external" videos for homepage slider or main title video.</li>
+    <li>Title backdrop will now be shown at the top of the page on mobile.</li>
+    <li>"Only streamable" filter can now be set to "on" by default.</li>
+    <li>Added an option to filter videos by "source" in admin videos page.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Prevent same person from appearing multiple times under "writers" on title page.</li>
+    <li>Automatically lowercase "department" and "job" fields when attaching people to title from admin area.</li>
+    <li>Fixed an issue with custom created news articles sometimes not showing preview on news page.</li>
+    <li>Show videos on title page in correct order.</li>
+    <li>Corrected an issue with auto-generated thumbnails for uploaded images sometimes being blurry.</li>
+    <li>Properly resize wide logos in navbar on mobile.</li>
+</ul>
+
+<h2>2019 January 18 - Version 3.0.7</h2>
+<h4>New Features</h4>
+<ul>
+    Added a new, simpler installer.
+</ul>
+<h4>Enhancements</h4>
+<ul>
+    <li>Improved person page layout on mobile.</li>
+    <li>Added some missing translation strings.</li>
+    <li>Improved season page layout on mobile.</li>
+    <li>Improved data migration from old versions (< 3.0.0).</li>
+    <li>Menu for custom pages can now be created via menu manager.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>"Streamable" filter will now correctly include videos attached to episodes.</li>
+    <li>Correctly show episode and season for video when editing it from admin area.</li>
+    <li>Hide "Register" button from navigation bar when registration is disabled.</li>
+    <li>Fullscreen mode should work properly now for video embeds.</li>
+    <li>Fixed an issue where users could not update their lists sometimes.</li>
+    <li>Fixed an issue where user permissions could not be updated from admin area.</li>
+    <li>Automatically set title year, when creating or updating title from admin area.</li>
+</ul>
+
+<h2>2019 January 11 - Version 3.0.6</h2>
+<h4>New Features</h4>
+<ul>
+    <li>Added "Only Streamable" filter to browse titles page.</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+    <li>Added an option to always update seasons, even if automation is disabled.</li>
+    <li>Added "Date Added" sort option to browse titles page.</li>
+    <li>Added "Death date" to person page (if available).</li>
+    <li>Person gender and death date can now be edited from admin area.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Increment title season and episode count automatically when adding seasons to title from admin area.</li>
+    <li>Fixed an issue with crew not being attachable to some titles.</li>
+</ul>
+
+<h2>2019 January 07 - Version 3.0.5</h2>
+<h4>New Features</h4>
+<ul>
+    <li>Added video and list management pages to admin area.</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+    <li>Browse page genres can now be specified from settings page.</li>
+    <li>Show more titles per row in title grids on tablet and small laptops.</li>
+    <li>Person biography will now be properly formatted.</li>
+    <li>When importing multiple titles, all supported filters like genres and keywords can now be specified.</li>
+    <li>Actor image can now be replaced when editing actor information from admin area.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed an issue where title plot would get cut off sometimes.</li>
+    <li>Fixed an issue with "remote" video links not opening in new window properly.</li>
+    <li>Fixed an issue where only single season would appear on title page sometimes.</li>
+    <li>Corrected some display issues with mobile search bar.</li>
+</ul>
+
+<h2>2019 January 05 - Version 3.0.4</h2>
+<h4>Enhancements</h4>
+<ul>
+    <li>Improved navbar layout on tablets.</li>
+    <li>Allow importing titles and people manually from admin event if automation is disabled.</li>
+    <li>Improved news page, people page and footer layout on mobile.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed some issues with installation that occurred on MariaDB.</li>
+    <li>Fixed an issue with "movie description" seo tag sometimes not properly displaying.</li>
+    <li>Fixed an issue with "loading" icon sometimes not disappearing.</li>
+    <li>Fixed an issue with slider blocking vertical scrolling on mobile.</li>
+</ul>
+
+<h2>2019 January 04 - Version 3.0.3</h2>
+<h4>Enhancements</h4>
+<ul>
+    <li>Don't redirect away from edit list page when removing list items.</li>
+    <li>Show two titles per row in titles grid on mobile instead of one.</li>
+    <li>Ensure database tables are always created with proper charset during installation.</li>
+    <li>It's now possible to specify how many items homepage slider should show.</li>
+    <li>Improved homepage slider layout on mobile.</li>
+    <li>Added an option to prevent automatic updates for specific titles and people.</li>
+    <li>Improved mobile layout on tv series season page.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed an issue where homepage lists would not work on some servers.</li>
+    <li>Corrected mobile navbar dropdown styling.</li>
+    <li>Fixed an issue where news were not updating automatically sometimes.</li>
+</ul>
+
+<h2>2019 January 03 - Version 3.0.2</h2>
+<h4>Enhancements</h4>
+<ul>
+    <li>Added a way to manually update news and lists from settings.</li>
+    <li>Improved layout of season page when episode descriptions are very long.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed issue with adding video and image to title from admin area.</li>
+    <li>Fixed issue where some titles could not be added to watchlist.</li>
+    <li>Fixed issue where watchlist sometimes was not created upon user registration.</li>
+    <li>Prevent video rating from becoming negative.</li>
+</ul>
+
+<h2>2019 January 02 - Version 3.0.1</h2>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>Fixed titles having empty cast panel sometimes.</li>
+    <li>Fixed season and episode links on episode page.</li>
+    <li>Fixed episode links in person credits table.</li>
+    <li>Fixed an installation issue that occurred on older mysql versions.</li>
+    <li>Fixed an issue with some titles not being deletable in admin area.</li>
+    <li>When editing title in admin area, only show reviews for that title.</li>
+</ul>
+
+<h2>2019 January 01 - Version 3.0.0</h2>
+<h4>New Features</h4>
+<ul>
+    <li>New site design, based on Google's Material Design.</li>
+    <li>Lists functionality allowing users and admin to create lists of movies, tv shows, people and more.</li>
+    <li>Titles can now be rated and reviewed by users.</li>
+    <li>New "keywords" and related titles functionality.</li>
+    <li>New full-screen video player that supports embeds (like youtube) as well as custom video files (.mp4 for
+        example).
+    </li>
+    <li>New "videos" section on title pages and support for attaching videos to titles.</li>
+    <li>New footer that can be fully manager from admin area.</li>
+    <li>Movies and series now support full credits (director, writers, crew etc) instead of just cast.</li>
+    <li>Support for title age ratings (certification).</li>
+    <li>New "Browse" page for browsing all available movies and tv series based on filters.</li>
+    <li>Built in support for setting up CRON (for automatically updating news, lists etc).</li>
+    <li>Roles and permissions system for giving users access to different functionality on the site.</li>
+    <li>Custom pages management and creation with WYSIWYG editor in admin panel.</li>
+    <li>Translation management in admin panel and multi-language support.</li>
+    <li>Appearance editor in admin panel for changing look of the site.</li>
+    <li>Menu manager for managing different menus on the site from admin panel.</li>
+    <li>New account settings page.</li>
+    <li>Google analytics integration in admin panel.</li>
+    <li>Mail templates editor in admin panel.</li>
+    <li>Support for storing user upload and other files on cloud services like Amazon S3 and DigitalOcean Spaces.</li>
+</ul>
+<h4>Enhancements</h4>
+<ul>
+    <li>Pages should load 40% to 60% faster.</li>
+    <li>Support for all latest PHP versions.</li>
+    <li>Better support for https (including proxies like cloudflare).</li>
+    <li>Improved mobile support and overall site responsiveness on different devices.</li>
+    <li>Upgraded to latest web technologies, allowing things like progressive web app and server-side rendering.</li>
+    <li>Lots of improvements to search functionality and performance.</li>
+    <li>Many new settings for content, localization, authentication, logging, cache and more added in settings page.
+    </li>
+    <li>Many improvements to authentication, including password reset, account confirmation and more.</li>
+</ul>
+<h4>Bug Fixes</h4>
+<ul>
+    <li>3.0.0 is a full re-write of MTDb, it fixes and improves a lot of issues across the whole site.</li>
+</ul>
+
+<h2>2018 January 18 - Version 2.9.4</h2>
+<ul>
+    <li>Fixed several issues with social login.</li>
+    <li>Fixed several visual issues with navbar.</li>
+    <li>Changed news provider to IMDb.</li>
+</ul>
+
+<h2>2017 March 26 - Version 2.9.3</h2>
+<ul>
+    <li>Fixed several issues with new search functionality.</li>
+    <li>Added release date and result type to search suggestions dropdown.</li>
+</ul>
+
+<h2>2017 March 24 - Version 2.9.2</h2>
+<ul>
+    <li>Added a new search bar for both desktop and mobile.</li>
+    <li>Search suggestions will now include actors as well as movies/series.</li>
+    <li>Updated navigation and filter bar designs.</li>
+    <li>Updated generic image that is shown when no movie/series/episode poster is found.</li>
+    <li>Improved search suggestions performance.</li>
+    <li>Fixed and issue with user reviews sometimes having wrong number of stars.</li>
+    <li>Fixed an issue with actor page that occurred when actor had no birth date or birth place information.</li>
+    <li>Fixed several issues with installer that would occur with various edge server configurations and restrictions.
+    </li>
+    <li>Fixed an issue with sitemap sometimes not generating properly.</li>
+</ul>
+
+<h2>2016 October 24 - Version 2.9.1</h2>
+<ul>
+    <li>Improved SEO of episode pages.</li>
+    <li>Improved performance of movies and series index pages.</li>
+    <li>News and reviews fetched from 3rd party sites will now not be indexed by crawlers by default to prevent
+        penalties from search engines. Can be re-enabled in settings page.
+    </li>
+    <li>Fixed an issue with installation on newer mysql versions.</li>
+    <li>Fixed an issue where sitemap would sometimes not generate correctly if there were a lot of movies/series.</li>
+    <li>Fixed an issue where movie or series would sometimes have wrong type when using IMDb data provider.</li>
+    <li>Fixed an issue where images would sometimes be blurry when using IMDb as data provider.</li>
+    <li>Fixed an issue where sitemap would sometimes generate capitalized urls.</li>
+</ul>
+
+<h2>2016 August 03 - Version 2.9</h2>
+<ul>
+    <li>Reviews will now be ordered by their rating by default.</li>
+    <li>Fixed an issue with search sometimes not finding existing movies and series.</li>
+    <li>Fixed an issue with news images sometimes stretching past their container.</li>
+    <li>Fixed an issue where empty reviews would sometimes be fetched.</li>
+    <li>Fixed an issue where critic reviews would always show 10 starts regardless of that reviews rating.</li>
+    <li>Fixed an issue with with episodes images sometimes being broken if using IMDb provider.</li>
+    <li>Fixed an issue with IMDb search provider not working sometimes.</li>
+    <li>Fixed an issue with ScreenRant news provider fetching wrong title for some news items.</li>
+</ul>
+
+<h2>2016 May 10 - Version 2.8.8</h2>
+<ul>
+    <li>Images from themoviedb will now be served over https.</li>
+    <li>Fixed an error that occurs when viewing manually created news.</li>
+    <li>Fixed some errors that occurred on more restrictive hostings.</li>
+    <li>Fixed an error that occurred when viewing episode page with streaming plugin installed.</li>
+    <li>Fixed an error when sometimes occurred when generating a sitemap.</li>
+</ul>
+
+<h2>2016 April 04 - Version 2.8.7</h2>
+<ul>
+    <li>Fixed several issues with news fetching.</li>
+    <li>Fixed several issues with installer.</li>
+    <li>Fixed several issues with sitemap generator.</li>
+    <li>Fixed several issues with site configuration.</li>
+    <li>Compatability with new streaming plugin and mercury theme versions.</li>
+</ul>
+
+<h2>2016 February 06 - Version 2.8.6</h2>
+<ul>
+    <li>Categories can now be set to update automatically using external sites from dashboard.</li>
+    <li>Homepage slider auto-sliding can now be toggled from settings page.</li>
+    <li>Added a new installer that will try to automatically correct a number of common server issues.</li>
+    <li>Fixed an issue where sometimes not all seasons of series would be fetched from IMDb.</li>
+    <li>Fixed an issue where search was not working properly when using accented characters.</li>
+    <li>Fixed an issue with installation that occurred when trying to use database prefix.</li>
+    <li>Fixed an issue with import movie/series data when creating it manually.</li>
+    <li>Fixed an issue with sitemap generator where a number of non existing items would be added to sitemap.</li>
+</ul>
+
+<h2>2015 October 25 - Version 2.8.5</h2>
+<ul>
+    <li>Added an option to enable/disable news and reviews scraping. It will be disabled by default.</li>
+    <li>Added an option to disable news and reviews functionality completely.</li>
+    <li>Improved performance of all title pages.</li>
+    <li>Added canonical urls to actors and news pages.</li>
+    <li>Titles can now be removed from watchlist and favorite pages directly.</li>
+    <li>Fixed an issue where series with many seasons would show 404 page for the last season.</li>
+    <li>Fixed an issue with canonical url not being generated correctly sometimes.</li>
+    <li>Fixed an issue where pagination in user profile page would not work properly.</li>
+</ul>
+
+<h2>2015 September 10 - Version 2.8.4</h2>
+<ul>
+    <li>Fixed an issue where installation was not working properly sometimes.</li>
+</ul>
+
+<h2>2015 September 07 - Version 2.8.3</h2>
+<ul>
+    <li>Fixed an issue where title would be accessible via both series and movies urls.</li>
+    <li>Fixed an issue with science fiction genre filter was not working sometimes.</li>
+    <li>Fixed an issue with data fetching not working on some server configurations.</li>
+    <li>Fixed an issue with generated sitemap file names.</li>
+    <li>Fixed an issue with pages not being deletable from dashboard if urls were translated.</li>
+    <li>Fixed an issue with facebook login.</li>
+</ul>
+
+<h2>2015 July 29 - Version 2.8.2</h2>
+<ul>
+    <li>Fixed the issues with installation that were introduced in last update.</li>
+    <li>Fixed an issue where trailer modal wouldn't have a close button when using default player.</li>
+    <li>Fixed an error that occured when generating a sitemap.</li>
+    <li>Actors biography will now have more/less toggler if it's very long.</li>
+    <li>Fixed a few issues with missing images in dashboard and titles index page.</li>
+</ul>
+
+<h2>2015 July 27 - Version 2.8</h2>
+<ul>
+    <li>You can now import data for a specific title from dashboard by simply entering that titles ID.</li>
+    <li>Changing a filter on movies or series index page will now return user to page 1 of the new results
+        automatically.
+    </li>
+    <li>Previous\Next episode widget on series page will now have links to those episodes.</li>
+    <li>Added support for themes.</li>
+    <li>Movies and Series attached to categories manually will now be ordered properly.</li>
+    <li>Fixed a display issue with autocomplete dropdown on profile page.</li>
+    <li>Fixed an issue with page creation not working on firefox.</li>
+    <li>Fixed some display issues with homepage slider.</li>
+    <li>Fixed an issue with wrong seasons number being fetched sometimes when using IMDb provider.</li>
+    <li>Fixed an issue with default image not being shown for episode if it has no specific one.</li>
+    <li>Fixed an issue with news editing if news url was translated.</li>
+</ul>
+
+<h2>2015 May 21 - Version 2.7.1</h2>
+<ul>
+    <li> Fixed an issue with installation/updating that was introduced in the last update.</li>
+    <li> Fixed an issue with menus not working properly if urls were translated.</li>
+    <li> Fixed an issue with navigation not working on phones.</li>
+</ul>
+<h2>2015 May 20 - Version 2.7</h2>
+<ul>
+    <li>You can now create and manage header and footer menus from dashboard.</li>
+    <li>You can now create custom pages from dashboard.</li>
+    <li>Implemented a new smoother, faster and more responsive slider.</li>
+    <li>Added a canonical link to prevent double indexing of some movies and series by crawlers.</li>
+    <li>Added image lazyloading to increase page load speed.</li>
+    <li>Episodes that have no image of their own will now show one of the series image.</li>
+    <li>Dashboard sidebar menu will now show which page is active.</li>
+    <li>Updated trailer fetching for movies and series when using tmdb as data provider.</li>
+    <li>All 404 pages will now return a proper status code for users and crawlers.</li>
+    <li>If user declines social login he will now be redirected to login page, instead of error.</li>
+    <li>Fixed a problem with installation not starting properly on some servers.</li>
+    <li>Fixed an issue with error being shown if movies or series release date is not formatted properly.</li>
+    <li>Fixed an issue with categories icon not updating properly.</li>
+    <li>Fixed an issue with title images sometimes not appearing.</li>
+    <li>Fixed an issue with user drop down menu not working on some browsers.</li>
+</ul>
+<h2>2015 January 21 - Version 2.6.1</h2>
+<ul>
+    <li>Fixed some layout issues with episodes page.</li>
+    <li>Fixed a bug with duplicating meta tags.</li>
+    <li>Fixed an issue with installation that occurred on some systems.</li>
+</ul>
+<h2>2015 January 16 - Version 2.6</h2>
+<ul>
+    <li>Security improvements.</li>
+    <li>Some improvements to slider.</li>
+    <li>Organized the dashboard &gt; settings page.</li>
+    <li>Individual episodes will now have a separate page.</li>
+    <li>Improved video modal height on various screen sizes.</li>
+    <li>Added missing language and country fields in title edit page.</li>
+    <li>Corrected example permissions syntax in dashboard &gt; users page.</li>
+    <li>Fixed an issue with accented characters not working in the search.</li>
+    <li>Search page will now show movies, series and people in the first tab.</li>
+    <li>Added more available limits to categories to account for news removal.</li>
+    <li>Fixed an issue with seasons not being selectable when editing a series.</li>
+    <li>Site title and Meta data can now be set from dashboard &gt; settings page.</li>
+    <li>Updated the installer to show any requirements server is missing to run MTDb.</li>
+    <li>Thumbnails will now be used for movie/series images when downloading them locally for faster load times.</li>
+</ul>
+<h2>2014 December 12 - Version 2.5</h2>
+<ul>
+    <li>Homepage news column can now be disabled from the dashboard.</li>
+    <li>Users can now be assigned permissions (create, edit, delete etc) from dashboard.</li>
+    <li>Added new buttons to the frond-end to edit and create resources when user has needed permissions.</li>
+    <li>Categories on homepage will now not get hidden if slider is removed.</li>
+    <li>It's now only possible to fetch movies and series for your selected data provider to prevent issues.</li>
+    <li>Added some missing translations to the translation file (more, less, next, prev, search).</li>
+    <li>Fixed a problem with pagination bar not always reflecting the actual page.</li>
+    <li>Fixed a bug with episode poster images not saving locally even if the appropriate setting in dashboard is set.
+    </li>
+    <li>Fixed a problem with movies/series plot not defaulting to english if it's not available in requested language.
+    </li>
+    <li>Fixed a problem with series episodes not defaulting to english if their data is not available in requested
+        language.
+    </li>
+    <li>Fixed a problem with themoviedb rating not being fetched when titles are created manually.</li>
+    <li>Fixed a problem with imdb search/scraping sometimes to working.</li>
+    <li>Improvements to homepage layout on smaller screen sizes.</li>
+    <li>Improvements to layout on firefox.</li>
+    <li>Improvements to navbar layout when viewing on phone.</li>
+    <li>Added a new images link for movies/series page when viewing on a phone.</li>
+</ul>
+<h2>2014 November 10 - Version 2.4</h2>
+<ul>
+    <li>Multiple performance optimizations, will be especially noticeable with large amounts of titles in database.</li>
+    <li>Fixed a problem with pagination bar not updating after using one of the filters.</li>
+    <li>Fixed an error that was thrown if users url was translated.</li>
+    <li>Fixed several bugs with user profile and watchlists.</li>
+    <li>Fixed several spacing problems on homepage that occurred on lower screen sizes.</li>
+</ul>
+<h2>2014 October 24 - Version 2.3</h2>
+<ul>
+    <li>Series page will now show previous/next episode if it's still being aired.</li>
+    <li>Movies and series index pages will now have a numbered pagination and specific pages can be bookmarked and
+        accessed via url.
+    </li>
+    <li>Movies, series and actors index pages will now show more items per page.</li>
+    <li>Fixed an issue with watchlist/favorites sometimes not updating when adding/removing title to these lists.</li>
+    <li>Flushing cache should no longer be needed after modifying categories, homepage will update automatically.</li>
+    <li>Fixed some errors with lesser know actor profiles.</li>
+    <li>Fixed an error on actor profile pages on lower versions of php.</li>
+    <li>Fixed a bug with max rating filter in movies/series index pages.</li>
+    <li>Fixed a bug where user review with rating of 10 would have 1 star.</li>
+    <li>Contact us form name field will now allow a space.</li>
+    <li>Inactive categories now won't be displayed.</li>
+    <li>Fixed a bug with proper icon not being shown for categories.</li>
+    <li>Fixed an error being thrown when themoviedb had no plot for a specific language.</li>
+    <li>Fixed an issue with series episodes editing not working after translating series url.</li>
+    <li>Search button in the navigation bar will now work as expected.</li>
+    <li>Fixed an issue where views on actors page wouldn't increment if the url was translated.</li>
+</ul>
+<h2>2014 September 9 - Version 2.2</h2>
+<ul>
+    <li>Improved 'known for' titles accuracy in actor profile pages.</li>
+    <li>Actors filmography will now show character names.</li>
+    <li>Links in actors profile page will now open in a new tab.</li>
+    <li>Fixed an issue with contact us emails.</li>
+    <li>Fixed an issue with dashboard actions page.</li>
+    <li>Improved themoviedb api wrapper, this should increase the load speed on title and actor pages as well</li>
+    as solve several errors when the script would throw an error when themoviedb returned unexpected response.
+    <li>Fixed a rare problem where titles with certain accented characters would throw an error.</li>
+    <li>Corrected a problem with seasons not being fetched from IMDb.</li>
+    <li>Fixed a problem with actors and news delete buttons not working if their urls have been translated.</li>
+</ul>
+<h2>2014 September 3 - Version 2.1</h2>
+<ul>
+    <li>Added categories. You can now create custom categories, attach movies, series or actors to them or select a type
+        you want to auto populate them with and they will be displayed on the homepage.
+    </li>
+    <li>Added Reviews page to dashboard.</li>
+    <li>Genres and stars names will now link to their respective pages in the title details panel.</li>
+    <li>Added statistics about number of items in database at the top of actions page in dashboard.</li>
+    <li>Index page now can be filtered by genre from url (http://mtdb.tv/movies?genre=action,comedy).</li>
+    <li>Users can now delete their reviews from title page.</li>
+    <li>Fixed a problem with email request during twitter login.</li>
+    <li>Corrected avatar position in the navbar.</li>
+    <li>Corrected sitemap generator index urls.</li>
+    <li>Contact us form will now specify 'from' address correctly.</li>
+    <li>Non existing user profile urls will now show 404 page correctly.</li>
+    <li>Corrected news page layout on phones.</li>
+    <li>Fixed a problem with updating titles manually.</li>
+    <li>Fixed a few problems that occurred if movies url was translated.</li>
+    <li>Fixed a problem with cast members sometimes having unknown as character name in title page.</li>
+    <li>Fixed an error that occurred then deleting all slides from the dashboard &gt; slider page.</li>
+    <li>Fixed a problem with wrong poster sometimes being fetched when using IMDb as data provider.</li>
+</ul>
+<h2>2014 August 4 - Version 2.0.2</h2>
+<ul>
+    <li>Added sitemap generator.</li>
+    <li>Movies and Series index pages are now fully crawlable by google.</li>
+    <li>Added users section to dashboard.</li>
+    <li>Added an option to switch to simple embed instead of custom video player.</li>
+    <li>Made links SEO friendly in movies/series index page and navbar autocomplete.</li>
+    <li>Fixed a bug with popular actors not updating on the homepage.</li>
+    <li>Fixed a problem with buy now button linking to wrong category.</li>
+    <li>Fixed a problem with search when using db as search provider.</li>
+    <li>Fixed a problem with media manager search.</li>
+    <li>Improved title page layout on phones/tablets.</li>
+    <li>Improved footer layout on phones/tablets.</li>
+    <li>Updated IMDb scraper according to new layout.</li>
+    <li>Fixed an issue with creating new actors.</li>
+    <li>Improved responsive layout in movies and series index pages.</li>
+    <li>Improved homepage layout on tablets.</li>
+    <li>Fixed an issue with fetching seasons from themoviedb.</li>
+    <li>Fixed a problem with datepicker not showing in user profile.</li>
+</ul>
+<h2>2014 June 23 - Version 2.0</h2>
+<ul>
+    <li>Redesigned the whole application from scratch visually, as well as rewritten much of the underlying code.</li>
+    <li>Multiple performance improvements to the whole app, should be nearly twice as fast.</li>
+    <li>Reworked homepage to have more movies/series related sections instead of news.</li>
+    <li>Reworked main movies/series page. Added new social sharing options, replaced comments/reviews section with a new
+        ajax based one.
+    </li>
+    <li>Added a new custom player to play videos instead of directly embedding them.</li>
+    <li>Reworked movies and series index pages. Will now have a new design, faster ajax based interface and more
+        powerful filtering options.
+    </li>
+    <li>Facelifted user profile page design to be more on par with new movies/series index pages.</li>
+    <li>Replaced homepage slider with a new better looking, modern one that will have information about movies as well
+        as trailers.
+    </li>
+    <li>Added a new management page to dashboard to go along with the new slider.</li>
+    <li>Reworked dashboard completely. Will have new design, use a new ajax based interface and will be much faster.
+    </li>
+    <li>Multiple improvements to scraping process, should no longer run out of memory even on legacy shared hostings,
+        when scraping large amounts of titles.
+    </li>
+    <li>Fixed a bug when series had more then 20 seasons.</li>
+    <li>Fixed the problem with some older titles from IMDb having white border around the poster.</li>
+    <li>Added an additional news provider.</li>
+    <li>Fixed an error with user registration.</li>
+    <li>Fixed a bug causing some titles to not appear in search results when using 'db' as search provider.</li>
+    <li>Multiple improvements to layout when viewing MTDb on phone/tablet.</li>
+    <li>Updated the scrapers to more accuretly report the number of titles scraped.</li>
+    <li>Updated news creation/updating with a more powerful WYSIWYG editor and integrated media uploader/manager into
+        it.
+    </li>
+    <li>Added a media manager where you can upload/delete and get a fully qualified urls of images.</li>
+    <li>Added new ads page to dashboard and updated existing ad slots positions.</li>
+    <li>Updated the documentation.</li>
+</ul>
+<h2>2014 April 12 - Version 1.6.8</h2>
+<ul>
+    <li>Fixed a number of edge case errors in movie and actor pages.</li>
+    <li>Updated IMDb data provider, according to the change in IMDb url structure.</li>
+    <li>Some memory performance improvements to movies/series scraping.</li>
+    <li>Fixed feeds always interpreting title as a movie in url.</li>
+    <li>Fixed Image increasing in size after uploading it.</li>
+    <li>Added some additional filters against adult titles and actors.</li>
+    <li>Fixed an issue when no reviews appear in homepage rows theme.</li>
+</ul>
